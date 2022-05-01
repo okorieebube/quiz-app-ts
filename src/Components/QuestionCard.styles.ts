@@ -1,3 +1,4 @@
+// @ts-ignore
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -33,7 +34,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     width: 100%;
     height: 40px;
     margin: 5px 0;
-    background: ${({ correct, userClicked }) =>
+    background: ${({ correct, userClicked }:{correct: boolean, userClicked:boolean}) =>
       correct
         ? 'linear-gradient(90deg, #56FFA4, #59BC86)'
         : !correct && userClicked
